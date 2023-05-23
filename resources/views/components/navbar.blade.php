@@ -10,7 +10,7 @@
             <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="{{route('article.create')}}">Inserisci un articolo</a>
           </li>
           @auth
           <li class="nav-item dropdown">
@@ -18,6 +18,10 @@
               Bentornat* {{ Auth::user()->name }}
             </a>
             <ul class="dropdown-menu">
+
+              {{-- @foreach($categories as $category) --}}
+              {{-- <li>{{$category->name}}</li> --}}
+              {{-- @endforeach --}}
               <li><a class="dropdown-item" href="#">Profilo</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#" anclick="event.preventDefault(); document.querySelector ('#form-logout').submit();">Logout</a></li>

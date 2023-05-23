@@ -18,7 +18,7 @@
 
     <x-navbar />
 
-    <x-header headerTitle="{{ $headertitle }}"></x-header>
+    {{-- <x-header headerTitle="{{ $headertitle }}"></x-header> --}}
 
     <div class="min-vh-100">
         {{ $slot }}
