@@ -10,7 +10,7 @@
     @livewireStyles
 
 
-    <title>Aulab_Post</title>
+    <title>The Daily Bugle</title>
 </head>
 <body>
 

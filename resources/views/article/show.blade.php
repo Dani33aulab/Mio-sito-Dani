@@ -9,9 +9,9 @@
 
                 <div class="container my-5">
                     <div class="row justify-content-around">
-                        @foreach($articles as $article)
+                        @foreach($article as $article)
                             <div class="col-12 col-md-8">
-                                    <img src="{{Storage::url($article->image)}}" class="img-fluid my-3">
+                                    <img src="{{Storage::url($article->image)}}" class="img-my-3">
                                     <div class="text-center">
                                         <h2>{{$article->subtitle}}</h2>
                                         <div class="my-3 text muted fst-italic">
@@ -30,7 +30,7 @@
                                 </div>
                                 
                             </div>
-                            
+                            @endforeach
                         </div>
                     </div>
                     

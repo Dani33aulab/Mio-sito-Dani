@@ -9,6 +9,16 @@ use Illuminate\Support\Facades\Auth;
 class ArticleController extends Controller
 {
 
+    public function byUser(User $User){
+
+        $articles = $User->articles->sortByDesc('created_at');
+        return view('article.by-User', compact('User', 'articles'));
+    }
+
+
+
+
+
     public function byCategory(Category $category){
 
         $articles = $category->articles->sortByDesc('created_at');

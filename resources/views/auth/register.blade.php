@@ -43,7 +43,7 @@
                 
                 
                 <button type="submit" class="btn btn-primary">Registrati</button>
-               <p class="small mt-2">Già registrato? <a href="{{ route('login')}}"></a>Cllica qui</p>
+               <p class="small mt-2">Già registrato? <a href="{{ route('login')}}"></a>Clicca Qui</p>
             </form>
             
         </div>

@@ -10818,6 +10818,30 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.card{
+
+    width: 200px;
+    height: 500px;
+
+}
+
+.card-img-custom{
+
+    max-height: 40%;
+    margin-top: 5%;
+}
+
+#giornal{
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+
+}
+
+#background-giornal{
+
+    background-image: url(/images/giornalback.jpg?d9070b75db1a178e0ff2e29bbef266cd);
+}
 
 
 

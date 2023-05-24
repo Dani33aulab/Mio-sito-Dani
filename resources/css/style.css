@@ -1,0 +1,24 @@
+.card{
+
+    width: 200px;
+    height: 500px;
+
+}
+
+.card-img-custom{
+
+    max-height: 40%;
+    margin-top: 5%;
+}
+
+#giornal{
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+
+}
+
+#background-giornal{
+
+    background-image: url('../../public/storage/media/giornalback.jpg');
+}
