@@ -22,6 +22,11 @@
             </a>
             <ul class="dropdown-menu">
 
+              @if(Auth::user()->is_admin)
+                <li><a class="dropdown-item" href="{{route('admin.dashboard')}}">Dashboard Admin</a></li>
+                @endif
+              
+
               {{-- @foreach($categories as $category) --}}
               {{-- <li>{{$category->name}}</li> --}}
               {{-- @endforeach --}}

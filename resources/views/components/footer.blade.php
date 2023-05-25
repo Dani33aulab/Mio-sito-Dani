@@ -17,7 +17,7 @@
         <h5 class="text-white">Area Riservata</h5>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Admin</a></li>
         </ul>
       </div>
 
@@ -35,10 +35,10 @@
       <div class="col-md-4 mb-3">
         <form>
           <h5 class="text-white">Iscriviti alla nostra Newsletter</h5>
-          <p class="text-white">Se ti iscrivi la moglie di J.J. non chiamerà più!!</p>
+          <p class="text-white">Se ti iscrivi, la moglie di J.J. non chiamerà più!!</p>
           <div class="d-flex flex-column flex-sm-row">
             <label for="newsletter1" class="visually-hidden">Indirizzo Email</label>
-            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+            <input id="newsletter1" type="text" class="form-control" placeholder="Scrivi il tuo indirizzo mail">
             <button class="btn btn-primary" type="button">Iscriviti</button>
           </div>
         </form>
