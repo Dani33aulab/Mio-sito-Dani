@@ -30,6 +30,12 @@ Route::get('/article/category/{category}' , [ArticleController::class, 'byCatego
 
 Route::get('/article/category/{User}' , [ArticleController::class, 'byUser'])->name('article.byUser');
 
+Route::get('/careers' , [ArticleController::class, 'careers'])->name('careers');
+
+Route::post('/careers/submit' , [ArticleController::class, 'careersSubmit'])->name('careers.submit');
+
+
+
 
 
 

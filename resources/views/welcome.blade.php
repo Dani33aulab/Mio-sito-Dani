@@ -1,6 +1,6 @@
 <x-layout>
 
-    <x-header headertitle='MY DAILY BUGLE'></x-header>
+    <x-header headertitle='TUTTI I POST DEL DAILY BUGGLE'></x-header>
 
     <div class="container-fluid p-5 bg-danger text-center text-white">
         <div class="row justify-content-center">

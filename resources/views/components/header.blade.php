@@ -1,4 +1,4 @@
-<header class="container-fluid p-5 text-black" id="background-giornal">
+<header class="container-fluid p-5 text-white" id="background-giornal">
     <div class="row justify-content-center text-center">
         <div class="col-12">
 

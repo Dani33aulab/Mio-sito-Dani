@@ -10833,6 +10833,8 @@ textarea.form-control-lg {
 
 #giornal{
 
+    background: rgb(224,193,108);
+    background: linear-gradient(74deg, rgba(224,193,108,1) 0%, rgba(226,0,84,0) 0%, rgba(31,6,15,1) 0%, rgba(32,11,18,0.700717787114846) 0%, rgba(38,32,30,0.23853291316526615) 100%, rgba(226,53,0,0.36458333333333337) 100%);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
 
@@ -10840,8 +10842,35 @@ textarea.form-control-lg {
 
 #background-giornal{
 
-    background-image: url(/images/giornalback.jpg?d9070b75db1a178e0ff2e29bbef266cd);
+    
+
+    background-image: url(/images/comiccollage1.jpg?b38f652e155650f177cf8afb6e383c38);
 }
+
+#logo{
+
+    width: 40px;
+    height: 32px;
+}
+
+#titolohome{
+    
+    background: rgb(224,193,108);
+    background: linear-gradient(74deg, rgba(224,193,108,1) 0%, rgba(226,0,84,0) 0%, rgba(31,6,15,1) 0%, rgba(32,11,18,0.700717787114846) 0%, rgba(38,32,30,0.23853291316526615) 100%, rgba(226,53,0,0.36458333333333337) 100%);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    
+}
+
+#backimagehome{
+
+    background-image: url(/images/comiccollage1.jpg?b38f652e155650f177cf8afb6e383c38);
+
+    
+}
+
 
 
 

@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="container-fluid p-5 bg-info text-center text-white">
+    <div class="container-fluid p-5 bg-danger text-center text-white">
         <div class="row justify-content-center">
             <h1 class="dipslay-1">
                 {{$article->title}}
@@ -9,7 +9,7 @@
 
                 <div class="container my-5">
                     <div class="row justify-content-around">
-                        @foreach($article as $article)
+                    
                             <div class="col-12 col-md-8">
                                     <img src="{{Storage::url($article->image)}}" class="img-my-3">
                                     <div class="text-center">
@@ -30,7 +30,7 @@
                                 </div>
                                 
                             </div>
-                            @endforeach
+                           
                         </div>
                     </div>
                     
