@@ -37,10 +37,12 @@
     
     background: rgb(224,193,108);
     background: linear-gradient(74deg, rgba(224,193,108,1) 0%, rgba(226,0,84,0) 0%, rgba(31,6,15,1) 0%, rgba(32,11,18,0.700717787114846) 0%, rgba(38,32,30,0.23853291316526615) 100%, rgba(226,53,0,0.36458333333333337) 100%);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow italic', sans-serif;
 
 
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    font-family:Impact, Haettenschweiler, 'Arial Narrow italic', sans-serif 
+
+    
     
 }
 

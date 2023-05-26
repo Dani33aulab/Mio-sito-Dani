@@ -3,7 +3,7 @@
     <div class="container-fluid p-5 bg-danger text-center text-white">
         <div class="row justify-content-center">
             <h1 class="display-1">
-                Bentornato, Amministratore
+                Bentornato, Revisore
 
             </h1>
 
@@ -20,8 +20,8 @@
             <div class="container my-5">
                 <div class="row justify-content-center">
                     <div class="col-12">
-                        <h2>Richieste per ruolo amministratore</h2>
-                        <x-requests-table :roleRequests="$adminRequests" role="amministratore"></x-requests-table>
+                        <h2>Articoli da revisionare</h2>
+                        <x-articles-table :articles="$unrevisioneArticles"></x-requests-table>
 
                     </div>
 
@@ -32,8 +32,8 @@
             <div class="container my-5">
                 <div class="row justify-content-center">
                     <div class="col-12">
-                        <h2>Richieste per ruolo revisore</h2>
-                        <x-requests-table :roleRequests="$adminRequests" role="revisore"></x-requests-table>
+                        <h2>Articoli pubblicati</h2>
+                        <x-articles-table :articles="$acceptedArticles"></x-requests-table>
 
                     </div>
 
@@ -44,8 +44,8 @@
             <div class="container my-5">
                 <div class="row justify-content-center">
                     <div class="col-12">
-                        <h2>Richieste per ruolo redattore</h2>
-                        <x-requests-table :roleRequests="$adminRequests" role="redattore"></x-requests-table>
+                        <h2>Articoli respinti</h2>
+                        <x-articles-table :articles="$rejectedArticles"></x-requests-table>
 
                     </div>
 
