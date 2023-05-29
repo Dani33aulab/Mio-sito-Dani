@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use Illuminate\Http\Request;
 
 class RevisorController extends Controller
@@ -12,7 +13,7 @@ class RevisorController extends Controller
         $acceptedArticles = Article::where('is_accepted', true)->get();
         $rejectedArticles = Article::where('is_accepted', false)->get();
 
-        return view('revisor.dashboard', compact('unrevisioneArticles', 'acceptedArticles', 'rejectedArticles'));
+        return view('revisor.dashboardreviso', compact('unrevisioneArticles', 'acceptedArticles', 'rejectedArticles'));
     }
 
     public function acceptArticle(Article $article){

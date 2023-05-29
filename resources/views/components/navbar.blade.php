@@ -25,6 +25,10 @@
               @if(Auth::user()->is_admin)
                 <li><a class="dropdown-item" href="{{route('admin.dashboard')}}">Dashboard Admin</a></li>
                 @endif
+
+                @if(Auth::user()->is_revisor)
+                <li><a class="dropdown-item" href="{{route('revisor.dashboard')}}">Dashboard del revisore</a></li>
+                @endif
               
 
               {{-- @foreach($categories as $category) --}}
@@ -51,10 +55,13 @@
         </ul>
       </li>
     </ul>
-    <form class="d-flex" role="search">
+    <form class="d-flex" method="GET" action="{{route('article.search')}}">
       <input class="form-control me-2" type="search" placeholder="Chiedi a J.J." aria-label="Search">
       <button class="btn btn-outline-primary" type="submit">Cerca</button>
     </form>
+
+
+
       </div>
     </div>
   </nav>
