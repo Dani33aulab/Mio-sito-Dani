@@ -16,7 +16,7 @@
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Admin</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Lavora con Noi</a></li>
+          <li class="nav-item mb-2"><a href="{{route('careers')}}" class="nav-link p-0 text-muted">Lavora con Noi</a></li>
         </ul>
       </div>
 

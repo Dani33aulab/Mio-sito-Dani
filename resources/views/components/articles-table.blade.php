@@ -10,7 +10,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach($articles as $article )
+        @foreach($articles as $article)
         <tr>
             <th scope="row">{{$article->id}}</th>
             <td>{{$article->title}}</td>

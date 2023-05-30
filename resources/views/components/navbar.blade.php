@@ -51,8 +51,9 @@
             </ul>
           </li>
           @endauth
-          
+          <li class="nav-item mb-2"><a href="{{route('careers')}}" class="nav-link text-white">Lavora con Noi</a></li>
         </ul>
+        
       </li>
     </ul>
     <form class="d-flex" method="GET" action="{{route('article.search')}}">

@@ -1,8 +1,8 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-info text-center text-white">
+    <div class="container-fluid p-5 bg-info text-center text-white" id=background-giornal>
         <div class="row justify-content-center">
-            <h1 class="display-1">
-                Lavora con noi
+            <h1 class="display-1" id=giornal>
+                Fatti Assumere da J.J. per 100$
             </h1>
         </div>
     </div>
@@ -11,11 +11,11 @@
         <div class="row justify-content-center align-items-center border rounded p-2 shadow">
             <div class="col-12 col-md-6">
                 <h2>Lavora come amministratore</h2>
-                <p>Cosa farai: ti oocuuperai della gestione degli articoli, pubblicazioni...ecc</p>
+                <p>Cosa farai: ti occuperai della gestione degli articoli, pubblicazioni...ecc</p>
                 <h2>Lavora come revisore</h2>
                 <p>Cosa farai: ti occuperai di approvvare o rileggere eventuali articoli sospetti.</p>
                 <h2>Lavora come redattore</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non tempore molestiae provident eius quidem dolorem eligendi possimus omnis veritatis, quia quod tenetur, molestias pariatur. Accusantium eum ullam quae nemo quod?</p>
+                <p>Aiuterai altri colleghi redattori in altre mansioni specifiche che ti saranno richieste</p>
 
             </div>
         </div>
@@ -38,7 +38,7 @@
 
                 <div class="mb-3">
 
-                    <label for="role" class="form-label">Per quale ruolo ti stai candidando</label>
+                    <label for="role" class="form-label">Per quale ruolo ti stai candidando?</label>
                     <select name="role" id="role" class="form-control">
 
                         <option value=""> Scegli qui</option>
@@ -55,7 +55,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="message" class="form-label">Parlaci di te</label>
-                    <textarea type="message" name="message" id="message" cols="30" rows="7" class="form-control">{{old('message')}}</textarea>
+                    <textarea type="message" name="message" id="message" cols="30" rows="7" placeholder="inserisci nota" class="form-control">{{old('message')}}</textarea>
                 </div>
                 <div class="mt-2">
                     <button class="btn btn-info text-white">Invia a J.J. la Tua Candidatura</button>

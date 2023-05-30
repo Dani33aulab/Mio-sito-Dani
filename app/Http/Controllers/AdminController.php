@@ -2,45 +2,62 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    public function dashboards(){
+    public function dashboard(){
 
-        $adminRequest = User::where('is_admin', NULL)->get();
+        $adminRequests = User::where('is_admin', NULL)->get();
         $revisorRequests = User::where('is_revisor', NULL)->get();
-        $writerRequests = User::where('is-writer', NULL)->get();
+        $writerRequests = User::where('is_writer', NULL)->get();
 
-        return view('admin.dashboards', compact('adminRequests', 'revisorRequests', 'writerRequests'));
+        return view('admin.dashboard', compact('adminRequests', 'revisorRequests', 'writerRequests'));
     }
 
-    public function setAdmin($user){
+    public function setAdmin(User $user){
         $user->update([
 
-            'is_admin' -> true,
+            'is_admin' => true,
         ]);
 
         return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente reso amministratore l\'utente scelto');
     }
 
-    public function setRevisor($user){
+    public function setRevisor(User $user){
+
+        
         $user->update([
 
-            'is_revisor' -> true,
+            'is_revisor' => true,
         ]);
 
         return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente reso revisore l\'utente scelto');
 
     }
 
-    public function setWriter($user){
+    public function setWriter(User $user){
+
+        
+        
         $user->update([
 
-            'is_revisor' -> true,
+            'is_writer' => true,
         ]);
 
         return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente reso redattore l\'utente scelto');
 
+    }
+
+    public function storeCategory(Request $request){
+
+        Category::create([
+
+            'name'=> strtolower($request->name),
+        ]);
+
+        return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente inserito una nuova categoria');
     }
 }
