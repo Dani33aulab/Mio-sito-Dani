@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use App\Mail\CareerRequestMail;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class PublicController extends Controller
 {
@@ -31,11 +34,13 @@ class PublicController extends Controller
 
     public function careersSubmit(Request $request){
 
+
+
         $request->validate([
 
-            'role' => 'requierd',
-            'email'=> 'requiered|email',
-            'message'=> 'requiered',
+            'role' => 'required',
+            'email'=> 'required|email',
+            'message'=> 'required',
         ]);
        
        

@@ -10,6 +10,13 @@
             Scritto il {{$article->created_at->format('d/m/y')}} da {{$article->user->name}}
 
         </li>
+
+        <p class="small fst-italic text-capitalize">
+        @foreach($article->tags as $tag)
+            #{{$tag->name}}
+        @endforeach
+        </p>
+
         <li class="list-group-item">
         <a href="{{route('article.byCategory', ['category'=> $article->category->id])}}" class="small text-muted fst-italic text-capitalize">{{$article->category->name}}</a>
 

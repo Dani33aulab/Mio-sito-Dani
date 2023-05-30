@@ -1,7 +1,7 @@
 <x-layout>
-   <div class="container-fluid p-5 bg-info text-center text-red">
+   <div class="container-fluid p-5 bg-black text-center text-red" id="background-giornal">
         <div class="row justify-content-center">
-            <h1 class="display-1">
+            <h1 class="display-1 text-white" id="giornal">
                 Inserisci Un Articolo
 
             </h1>
@@ -33,12 +33,12 @@
                             @csrf
                             <div class="mb-3">
                                 <label for="title" class="form-label"> Titolo del Post</label> 
-                                <input type="text" name="title" class="form-control" id="title" value="{{ old('title')}}">
+                                <input type="text" name="title" class="form-control" id="title" placeholder="Inserisci"   value="{{ old('title')}}">
                             </div>
         
                             <div class="mb-3">
                                 <label for="subtitle" class="form-label"> Sottotitolo</label> 
-                                <input type="text" name="subtitle" class="form-control" id="subtitle" value="{{ old('subtitle')}}">
+                                <input type="text" name="subtitle" class="form-control" id="subtitle" placeholder="Inserisci" value="{{ old('subtitle')}}">
                             </div>
         
                             <div class="mb-3">
@@ -62,15 +62,25 @@
 
                             <div class="mb-3">
                                 <label for="body" class="form-label"> Corpo del testo</label> 
-                                <textarea name="body" id="body" cols="30" rows="7" class="form-control">{{old('body')}}</textarea>
+                                <textarea name="body" id="body" cols="30" rows="7" placeholder="Inserisci il tuo pensiero"  class="form-control">{{old('body')}}</textarea>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="tags" class="form-label"> Tags</label> 
+                                <input name="tags" id="tags" class="form-control" value="{{old('tags')}}">
+                                <span class="small fst-italic">Dividi ogni tag con una virgola</span>
                             </div>
 
         
         
                             <div class="mb-2">
                             <button type="submit" class="btn btn-info text-white">Inserisci articolo</button>
-                            <a class="btn btn-autline-info" href="{{route('homepage')}}">Torna alla home</a></p>
+                            <a class="btn btn-black" href="{{route('homepage')}}">Torna alla home</a></p>
                             </div>
+
+
+                            
                         </form>
                         
                         

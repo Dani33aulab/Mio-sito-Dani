@@ -5,6 +5,8 @@
     <div class="container-fluid p-5 bg-danger text-center text-white">
         <div class="row justify-content-center">
             
+            
+            <a class="btn btn-primary nav-link text-white" href="{{route('article.create')}}">Inserisci un Articolo</a>
 
             @if(session('message'))
                 <div class="alert alert-success text-center">
@@ -22,6 +24,7 @@
                             </x-card>
                     @endforeach
                 </div>
+
         </div>
 
     </div>

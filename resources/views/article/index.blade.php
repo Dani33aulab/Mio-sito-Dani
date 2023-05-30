@@ -13,6 +13,12 @@
                         @foreach($articles as $article)
                         <x-card :article=$article>
 
+                            <p class="small fst-italic text-capitalize">
+                                @foreach($article->tags as $tag)
+                                    #{{$tag->name}}
+                                @endforeach
+                                </p>
+
 
                         </x-card>
                          @endforeach

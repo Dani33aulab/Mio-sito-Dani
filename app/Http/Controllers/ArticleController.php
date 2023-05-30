@@ -49,7 +49,61 @@ class ArticleController extends Controller
         return view('article.search-index', compact('articles', 'query'));
     }
 
+    public function editTag(Request $request, Tag $tag){
+
+        $request->validate([
+
+            'name' => 'required|unique:tags',
+        ]);
+
+        $tag->update([
+
+            'name' => strtolower($request->name),
+        ]);
+
+        return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente aggiornato il tag');
+    }
+
+
+        public function deleteTag(Tag $tag){
+
+            foreach($tag->articles as $article){
+
+                $article->tags()->detach($tag);
+            }
+
+            $tag->delete();
+
+            return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente eliminato il tag');
+        }
+
     
+        public function editCategory(Request $request, Category $category){
+
+            $request->validate([
+
+                'name' => 'required|unique:categories',
+            ]);
+
+            $category->update([
+
+                'name' => strtolower($request->name),
+
+            ]);
+
+            return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente aggiornato la categoria');
+
+
+        }
+
+        public function deleteCategory(Category $category){
+
+            $category->delete();
+
+            return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente eliminato la categoria');
+        }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -90,6 +144,19 @@ class ArticleController extends Controller
 
 
         ]);
+
+        $tags = explode(',', $request->tags);
+
+        foreach($tags as $tag){
+            
+            $newTag = Tag::updateOrCreate([
+
+                'name' => $tag,
+            ]);
+
+            $article->tags()->attach($newTag);
+
+        }
 
         return redirect(route('homepage'))->with('message', 'Articolo creato J.J. Approva!!');
          

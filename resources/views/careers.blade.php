@@ -33,13 +33,13 @@
             @endif
             {{-- per vedere errori in homepage --}}
 
-            <form class="p-5" action="" method="">
+            <form class="p-5" action="{{route('careers.submit')}}" method="POST">
                 @csrf
 
                 <div class="mb-3">
 
                     <label for="role" class="form-label">Per quale ruolo ti stai candidando</label>
-                    <select name="role" id="role" class="form-control"></select>
+                    <select name="role" id="role" class="form-control">
 
                         <option value=""> Scegli qui</option>
                         <option value="admin"> Amministratore</option>
@@ -55,7 +55,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="message" class="form-label">Parlaci di te</label>
-                    <textarea type="message" id="message" cols="30" rows="7" class="form-control">{{old('message')}}</textarea>
+                    <textarea type="message" name="message" id="message" cols="30" rows="7" class="form-control">{{old('message')}}</textarea>
                 </div>
                 <div class="mt-2">
                     <button class="btn btn-info text-white">Invia a J.J. la Tua Candidatura</button>

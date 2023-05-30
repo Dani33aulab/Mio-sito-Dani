@@ -33,6 +33,12 @@
                 </div>
 
                 @endforeach
+
+                <p class="small fst-italic text-capitalize">
+                    @foreach($article->tags as $tag)
+                        #{{$tag->name}}
+                    @endforeach
+                    </p>
         </div>
 
 

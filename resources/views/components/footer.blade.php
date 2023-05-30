@@ -5,8 +5,6 @@
       <div class="col-6 col-md-2 mb-3">
         <h5 class="text-white">Link</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Inserisci Articolo</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Articoli</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
@@ -18,17 +16,15 @@
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Admin</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Lavora con Noi</a></li>
         </ul>
       </div>
 
       <div class="col-6 col-md-2 mb-3">
         <h5 class="text-white">Social</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Facebook</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Instagram</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Twitter</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">YouTube</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Linkedin</a></li>
         </ul>
       </div>
 
