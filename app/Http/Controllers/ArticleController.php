@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Models\Tag;
 use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -49,59 +51,7 @@ class ArticleController extends Controller
         return view('article.search-index', compact('articles', 'query'));
     }
 
-    public function editTag(Request $request, Tag $tag){
-
-        $request->validate([
-
-            'name' => 'required|unique:tags',
-        ]);
-
-        $tag->update([
-
-            'name' => strtolower($request->name),
-        ]);
-
-        return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente aggiornato il tag');
-    }
-
-
-        public function deleteTag(Tag $tag){
-
-            foreach($tag->articles as $article){
-
-                $article->tags()->detach($tag);
-            }
-
-            $tag->delete();
-
-            return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente eliminato il tag');
-        }
-
     
-        public function editCategory(Request $request, Category $category){
-
-            $request->validate([
-
-                'name' => 'required|unique:categories',
-            ]);
-
-            $category->update([
-
-                'name' => strtolower($request->name),
-
-            ]);
-
-            return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente aggiornato la categoria');
-
-
-        }
-
-        public function deleteCategory(Category $category){
-
-            $category->delete();
-
-            return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente eliminato la categoria');
-        }
 
         
 
@@ -134,7 +84,7 @@ class ArticleController extends Controller
 
         ]);
 
-        Article::create([
+            $article=Article::create([
 
             'title' => $request->title,
             'subtitle' => $request->subtitle,
@@ -176,7 +126,7 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
-        //
+        return view('article.edit' , compact('article'));
     }
 
     /**
@@ -184,14 +134,67 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        //
-    }
+        $request->validate([
+
+            'title' => 'requiered|min:5|unique:articles,title,' , $article->id,
+            'subtitle' => 'required|min:5|unique:articles,subtitle,', $article->id,
+            'body' => 'required|min:10',
+            'image' => 'image',
+            'category'=> 'required',
+            'tags' => 'required',
+
+
+        ]);
+
+        $Article->update([
+
+            'title' => $request->title,
+            'subtitle' => $request->subtitle,
+            'body' => $request->body,
+            'category_id' => $request->category,
+
+        ]);
+
+        if($request->image){
+            Storage::delete($article->image);
+            $article->update([
+
+                'image' => $request->file('image')->store('public/images'),
+            ]);
+            
+            
+        }
+
+        $tags = explode(',', $request->tags);
+        $newTags = [];
+
+        foreach($tags as $tag){
+            
+            $newTag = Tag::updateOrCreate([
+
+                'name' => $tag,
+            ]);
+
+            $newTags[] = $newTag->id;      
+        
+            $articles->tags()->sync($newtags);
+    
+            return redirect(route('writer.dashboard'))->with('message', 'Hai correttamente aggiornato l\'articolo scelto');
+    }}
+
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(Article $article)
     {
-        //
+        foreach($article->tags as $tag){
+
+            $article->tags()->detach($tag);
+        }
+
+        $article->delete();
+
+        return redirect(route('writer.dashboard'))->with('message', 'Hai correttamente cancellato l\'articolo scelto');
     }
 }

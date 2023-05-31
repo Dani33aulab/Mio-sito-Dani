@@ -1,21 +1,22 @@
 <x-layout>
     <div class="container-fluid p-5 bg-info text-center text-white" id=background-giornal>
         <div class="row justify-content-center">
-            <h1 class="display-1" id=giornal>
+            <h1 class="display-1"id=giornal>
                 Fatti Assumere da J.J. per 100$
             </h1>
         </div>
     </div>
 
-    <div class="container my-5">
+    <div class="container my-5 bg-white">
         <div class="row justify-content-center align-items-center border rounded p-2 shadow">
-            <div class="col-12 col-md-6">
-                <h2>Lavora come amministratore</h2>
-                <p>Cosa farai: ti occuperai della gestione degli articoli, pubblicazioni...ecc</p>
-                <h2>Lavora come revisore</h2>
-                <p>Cosa farai: ti occuperai di approvvare o rileggere eventuali articoli sospetti.</p>
-                <h2>Lavora come redattore</h2>
-                <p>Aiuterai altri colleghi redattori in altre mansioni specifiche che ti saranno richieste</p>
+            <img src="{{Storage::url("media/peter.jpg")}}">
+            <div class="col-12 col-md-6 my-5">
+                <h2 class="text-black bg-danger text-center">Lavora come Amministratore</h2>
+                <p class="text-black text-center">Cosa farai: ti occuperai della gestione degli articoli, pubblicazioni...ecc</p>
+                <h2 class="text-black bg-danger text-center">Lavora come Revisore</h2>
+                <p class="text-black text-center">Cosa farai: ti occuperai di approvvare o rileggere eventuali articoli sospetti.</p>
+                <h2 class="text-black bg-danger text-center">Lavora come Redattore</h2>
+                <p class="text-black text-center">Aiuterai altri colleghi redattori in altre mansioni specifiche che ti saranno richieste</p>
 
             </div>
         </div>

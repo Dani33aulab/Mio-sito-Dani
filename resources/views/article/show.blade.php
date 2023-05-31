@@ -9,11 +9,19 @@
 
                 <div class="container my-5">
                     <div class="row justify-content-around">
-
-                        @if(Auth::user() && Auth::user()->is_revisor) 
-                            <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn btn success text-white my-5">Accetta articolo</a>
-                            <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn btn danger text-white my-5">Rifiuta articolo</a>
+                        
+                        <div class="col-3">
+    
+                            @if(Auth::user() && Auth::user()->is_revisor) 
+                            <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn btn-info text-white my-5 btn-show">Accetta articolo</a>
+                            <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn btn-info text-white my-5 btn-show">Rifiuta articolo</a>
                         @endif
+    
+                        </div>
+                    </div>
+                    <div class="row justify-content-around">
+
+                        
 
                             <div class="col-12 col-md-8">
                                     <img src="{{Storage::url($article->image)}}" class="img-my-3">

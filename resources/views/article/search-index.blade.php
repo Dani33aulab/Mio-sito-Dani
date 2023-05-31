@@ -20,19 +20,20 @@
                             <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="small text-muted fst-italic text-capitalize">{{$article->category->name}}</a>
                         </div>
                         <div class="card-footer text-muted d-flex justify-content-between align-items-center">
-                            <a class="" href="{{route('article.byUser', ['user'=> $article->category->id])}}">Redatto il {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}</a>
+                            <a class="" href="{{route('article.byUser', ['User'=> $article->user])}}">Redatto il {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}</a>
                             <a href="{{route('article.show', compact('article'))}}" class="btn btn-info text-white">Leggi</a>
 
 
                         </div>
 
                         @if($article->category)
-                        <a href="{{route('article.byCategory'['category' => $article->category->id])}}" class="small text-muted fst-italic text-capitalize">{{$article->category->name}}</a>
+                        <a href="{{route('article.byCategory',['category' => $article->category->id])}}" class="small text-muted fst-italic text-capitalize">{{$article->category->name}}</a>
                     @else 
                     <p class="small text-muted fst-italic text-capitalize">
                         Non categorizzato
 
                     </p>
+                    @endif
                 </p>
 
 
@@ -41,7 +42,7 @@
 
                 </div>
 
-                @endforeach
+                
 
                 <p class="small fst-italic text-capitalize">
                     @foreach($article->tags as $tag)
@@ -52,6 +53,6 @@
 
 
     </div>
-
+    @endforeach
 
 </x-layout>

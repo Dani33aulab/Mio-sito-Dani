@@ -54,3 +54,21 @@
 }
 
 
+#lavora{
+
+    background-image: url('../../public/storage/media/sfondo_lavora.jpg');
+}
+
+
+.custom-carosel{
+
+    width: 200px;
+    height: 10vh;
+}
+
+.btn-show{
+
+    width: 200px !important;
+
+}
+

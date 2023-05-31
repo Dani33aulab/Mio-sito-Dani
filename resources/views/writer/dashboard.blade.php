@@ -3,7 +3,7 @@
     <div class="container-fluid p-5 bg-danger text-center text-white">
         <div class="row justify-content-center">
             <h1 class="display-1">
-                Bentornato, Revisore
+                Bentornato, Redattore
 
             </h1>
 
@@ -11,7 +11,7 @@
 
     </div>
             @if(session('message'))
-                <div class="alert alert-primary text-center">
+                <div class="alert alert-success text-center">
                     {{session('message')}}
 
                 </div>
@@ -20,8 +20,8 @@
             <div class="container my-5">
                 <div class="row justify-content-center">
                     <div class="col-12">
-                        <h2>Articoli da revisionare</h2>
-                        <x-articles-table :articles="$unrevisioneArticles"></x-requests-table>
+                        <h2>Articoli in fase di revisione</h2>
+                        <x-writer-articles-table :articles="$unrevisionedArticles"/>
 
                     </div>
 
@@ -33,7 +33,7 @@
                 <div class="row justify-content-center">
                     <div class="col-12">
                         <h2>Articoli pubblicati</h2>
-                        <x-articles-table :articles="$acceptedArticles"></x-requests-table>
+                        <x-writer-articles-table :articles="$acceptedArticles"/>
 
                     </div>
 
@@ -45,7 +45,7 @@
                 <div class="row justify-content-center">
                     <div class="col-12">
                         <h2>Articoli respinti</h2>
-                        <x-articles-table :articles="$rejectedArticles"></x-requests-table>
+                        <x-writer-articles-table :articles="$rejectedArticles"/>
 
                     </div>
 
