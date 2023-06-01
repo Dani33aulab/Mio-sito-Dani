@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="container-fluid p-5 bg-danger text-center text-white">
+    <div class="container-fluid p-5 bg-danger text-center text-white" id="giornal">
         <div class="row justify-content-center">
             <h1 class="display-1">
                 Bentornato, Revisore

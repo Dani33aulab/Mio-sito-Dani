@@ -41,7 +41,7 @@
                     </div>
     
                     <button type="submit" class="btn btn-primary">Accedi</button>
-                    <p class="small mt-2">Non sei registrato?<a href="{{ route('register')}}"></a>Clicca Qui</p>
+                    <p class="small mt-2">Non sei registrato?<a href="{{ route('register')}}">Clicca Qui</a></p>
                   </form>
     
             </div>

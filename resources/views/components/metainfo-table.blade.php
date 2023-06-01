@@ -1,7 +1,7 @@
 <table class="table table-striped table-hover border">
     <thead class="table-dark">
         <tr>
-            <th scope="col">#</th>
+            <th scope="col">N°</th>
             <th scope="col">Nome tag</th>
             <th scope="col">Q.ta articoli collegati</th>
             <th scope="col">Aggiorna</th>

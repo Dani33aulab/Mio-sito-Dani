@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="container-fluid p-5 bg-danger text-center text-white">
+    <div class="container-fluid p-5 bg-danger text-center text-white" id="giornal">
         <div class="row justify-content-center">
             <h1 class="dipslay-1">
                 {{$article->title}}
@@ -35,7 +35,7 @@
                                     <p>{{$article->body}}</p>
                                     <div class="text-center">
                                         Scritto il {{$article->created_at->format('d/m/y')}} da {{$article->user->name}}
-                                        <a href="{{route('article.index')}}" class="btn btn-info text-white my-5">Torna indietro</a>
+                                        <a href="{{route('article.index')}}" class="btn btn-primary text-white my-5">Torna indietro</a>
                                         
                                     </div>
                                     

@@ -18,7 +18,7 @@
 
                 <div class="container my-5">
                     <div class="row justify-content-around">
-                        @foreach($articles as $article)
+                        @foreach($articles->where('is_accepted', true) as $article)
                             <x-card :article=$article>
 
                                 @if($article->category)
@@ -86,6 +86,24 @@
       </div>
 
     </div>
+
+    <section class="container justify-content-center text-center">
+        <div class="row my-5">
+
+            <div class="col-12 col-8">
+
+              <h2 id="giornal">I NOSTRI NUMERI</h2>
+              <p class="lead text-light bg-dark" ><span class="increment-numbers"> +150 </span>ARTICOLI CARICATI</p>
+              <p class="lead text-light bg-dark"><span class="increment-numbers"> +2000 </span>LETTORI</p>
+              <p class="lead text-light bg-dark"><span class="increment-numbers"> +100 </span>ISCRITTI</p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
     
 
 </x-layout>
